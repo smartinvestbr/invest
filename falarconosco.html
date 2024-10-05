@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fale Conosco</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"], input[type="email"], textarea {
+            width: 95%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        textarea {
+            height: 150px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .confirmation-message {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .confirmation-message button {
+            width: auto;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Fale Conosco</h2>
+    
+
+    <form id="contactForm" action="enviar_mensagem.php" method="POST" onsubmit="showConfirmation(event)">
+        <label for="nome">Nome Completo:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="email">E-mail para Contato:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" required></textarea>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+
+    <div class="confirmation-message" id="confirmationMessage">
+        <h3>Obrigado por entrar em contato!</h3>
+        <p>Aguarde nossa resposta em breve.</p>
+        <button onclick="goToHome()">Voltar ao Menu Inicial</button>
+    </div>
+</div>
+
+<script>
+
+    function showConfirmation(event) {
+        event.preventDefault(); 
+        
+        document.getElementById('contactForm').style.display = 'none';
+        document.getElementById('confirmationMessage').style.display = 'block';
+    }
+
+    function goToHome() {
+        window.location.href = 'alvo.html';
+    }
+</script>
+
+</body>
+</html>

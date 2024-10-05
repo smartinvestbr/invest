@@ -1,0 +1,19 @@
+h2 {
+  font-family :"Arial";
+  font-size : 14px;
+  color: #00FF00;
+}
+
+.corverde {
+  color: yellow;
+  color: white;
+  color: black;
+}
+
+table {
+ border-spacing  : 30px;
+ }
+ 
+ body {
+   background-color:black;
+ }

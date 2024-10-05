@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    
+    background:
+    url("backgroundinicial.png");
+}
+
+.carrossel {
+    position: relative;
+    max-width: 793px; 
+    margin: auto;
+    overflow: hidden;
+}
+
+.carrossel-container {
+    display: flex;
+    transition: transform 0.5s ease;
+    
+}
+
+.carrossel-item {
+    min-width: 100%;
+}
+
+
+.carrossel img {
+    width: 100%; 
+    display: block;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
